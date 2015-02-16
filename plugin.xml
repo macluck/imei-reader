@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="macluck.imeireader"
+        version="0.0.1">
+    <name>IMEI Reader</name>
+    <description>Android IMEI Readed for Cordova</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, imei</keywords>
+    <repo></repo>
+    <issue></issue>
+    <js-module src="www/ImeiReader.js" name="ImeiReader">
+        <runs />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImeiReader" >
+                <param name="android-package" value="macluck.ImeiReader"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/src/macluck/ImeiReader.java" target-dir="src/android/src/macluck/" />
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        </config-file>
+    </platform>
+</plugin>
