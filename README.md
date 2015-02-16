@@ -10,13 +10,13 @@ cordova plugin add https://github.com/macluck/imei-reader.git
 
 To use it in your app, add following:
 
-```
-    var imeiReader = window.plugins.imeiReader;
-    imeiReader.read(function (imei) {
-        //Imei number is a string
-    },
-    function (err) {
-    });
+```javascript
+var imeiReader = window.plugins.imeiReader;
+imeiReader.read(function (imei) {
+    //Imei number is a string
+},
+function (err) {
+});
 ```
 
-Enjoy!
+Enjoy.
