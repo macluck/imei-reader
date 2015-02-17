@@ -1,4 +1,4 @@
-package fi.srv.imei;
+package macluck.imei;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
